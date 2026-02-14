@@ -1,0 +1,17 @@
+Class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        """
+        Devuelve los índices de dos elementos de `nums` cuya suma es igual a `target`.
+
+        Parámetros:
+        nums (List[int]): Lista de enteros (positivos, negativos o cero).
+        target (int): Valor objetivo a alcanzar con la suma de dos elementos de `nums`.
+
+        Retorna:
+        List[int]: Lista de dos índices i y j tales que nums[i] + nums[j] == target.
+        """
+        n = len(nums)
+        for i in range(n):
+            for j in range(i + 1, n):
+                if nums[i] + nums[j] == target:
+                    return [i, j]
