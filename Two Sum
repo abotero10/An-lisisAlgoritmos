@@ -1,4 +1,4 @@
-Class Solution:
+class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         """
         Devuelve los índices de dos elementos de `nums` cuya suma es igual a `target`.
