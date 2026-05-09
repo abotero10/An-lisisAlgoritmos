@@ -1,0 +1,21 @@
+class Solution:
+    def rob(self, nums):
+        """
+        Calcula el máximo dinero que se puede robar sin tomar casas adyacentes.
+
+        Usa programación dinámica donde en cada casa se decide entre:
+        robarla (sumando dp[i-2]) o no robarla (dp[i-1]).
+
+        Complejidad:
+        - Tiempo: O(n)
+        - Espacio: O(1)
+        """
+        prev1 = 0
+        prev2 = 0
+
+        for num in nums:
+            temp = prev1
+            prev1 = max(prev1, prev2 + num)
+            prev2 = temp
+
+        return prev1
